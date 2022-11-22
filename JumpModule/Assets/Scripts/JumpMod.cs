@@ -4,20 +4,14 @@ using UnityEngine;
 
 public class JumpMod : MonoBehaviour
 {
-    [SerializeField] bool isGrounded;
     [SerializeField] bool jump;
     [SerializeField] int maxCounter = 3;
-    [SerializeField] int counter = 0;
+    int counter;
     [SerializeField] Rigidbody rb;
     [SerializeField] int jumpForce = 30;
     [SerializeField] int layer = 6;
     void Update()
     {
-        if (isGrounded)
-        {
-            maxCounter = 0;
-        }
-
         if (counter >= maxCounter)
         { return; }
 
